@@ -1,0 +1,39 @@
+Connector Assembly (connector_assembly.step)
+
+Format: ISO 10303-21 (STEP)
+
+Description:
+- Space-grade connector housing with locking interface for external communication cable
+- Mounts to rear of pressure sensor housing (mates with cutout from pressure_sensor_housing.step)
+- Integrated strain relief chamber
+- Supports ribbon cable or twisted pair (shielded)
+
+Dimensions:
+- Outer dimensions: 15mm (W) x 12mm (H) x 20mm (L)
+- Mounting flange: 20mm x 15mm
+- Cable channel: 6mm width x 4mm height
+- Locking notch system with tactile feedback
+
+Materials:
+- Main body: Aluminum 6061 anodized
+- Internal strain relief insert: silicone rubber
+- Cable interface: polycarbonate seal clamp
+
+Features:
+- Rear-threaded barrel for cable tension fitting
+- Optional EMI gasket groove
+- Cable guide rail + tie-down cavity
+- Panel slot depth: 3mm
+
+Assembly Overview:
+1. Connector slots into housing cutout
+2. Cable threads through from internal PCB to external port
+3. Strain relief seated against internal rib
+4. Optionally sealed with RTV or crimp ferrule
+5. Mount with M2 bolts into housing tabs
+
+Reconstruction Steps (in CAD):
+- Create a 15x12x20mm rectangular prism
+- Add flange, barrel slot, and cable tunnel
+- Add M2 bolt holes on 20mm center
+- Export as `.step`
