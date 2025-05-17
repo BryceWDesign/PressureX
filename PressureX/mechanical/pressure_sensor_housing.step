@@ -1,0 +1,15 @@
+[Binary STEP file content placeholder]
+
+Note: Actual STEP files are binary and cannot be meaningfully represented in text format here.  
+Please use CAD software such as SolidWorks, Fusion 360, or FreeCAD to create the 3D model based on the following specifications:
+
+- Outer dimensions: 50mm x 40mm x 20mm (Length x Width x Height)
+- Material: Space-rated aluminum alloy (e.g., 6061-T6)
+- Wall thickness: 3mm
+- Mounting holes: Four M3 threaded holes at corners, 35mm apart (center-to-center)
+- Sensor cavity: Precisely dimensioned to fit PCB and sensor module securely
+- Cable entry: Sealed gland for ribbon cable ingress
+
+---
+
+For full production, export and upload the actual STEP file here.
