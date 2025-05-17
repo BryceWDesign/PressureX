@@ -1,0 +1,52 @@
+[pressure_sensor_mechanical_drawing.pdf]
+
+Pages: 1  
+Format: A4 / ISO standard PDF  
+Scale: 1:1  
+Units: Millimeters (mm)
+
+Contents:
+───────────────────────────────────────────────
+1. Front Orthographic View of Sensor Housing
+   - Width: 45mm ± 0.2
+   - Height: 30mm ± 0.2
+   - Depth: 22mm ± 0.2
+
+2. Side View
+   - Dome radius: 13mm
+   - Shell thickness: 1.8mm
+
+3. Rear View with Connector Port
+   - Cutout: 12mm x 15mm with 3mm depth
+   - M2 threaded holes (2x) @ 20mm apart
+
+4. Sectional View
+   - PCB slot alignment inside housing
+   - Cable path routing through connector cavity
+
+5. Exploded View (Callouts):
+   - Part A: Upper Shell
+   - Part B: Lower Shell
+   - Part C: PCB (see separate board layout)
+   - Part D: Rear Connector Assembly
+   - Part E: Sensor Module (mounted)
+
+6. Material Notes:
+   - Sensor shell: 6061 Aluminum, anodized
+   - Internal PCB mounting: PEEK spacers
+   - Fasteners: M2 SS screws
+   - Surface finish: Brushed matte
+
+7. Tolerance Block:
+   - Linear: ±0.1 mm
+   - Angular: ±0.5°
+   - Hole center: ±0.1 mm
+
+8. Drawing Revision: A  
+   - Date: 2025-05-17  
+   - Drafter: B. W. Design  
+───────────────────────────────────────────────
+
+Printability: Black/White linework optimized for laser print and optical scan.
+
+Use: Share with contractors, machinists, or internal R&D to fabricate or validate mechanical interfaces.
