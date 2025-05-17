@@ -1,36 +1,81 @@
-# Thermal Cycling Test Protocol for PressureX Sensor Assembly
+# PressureX Sensor – Thermal Cycling Test Protocol
 
-## Objective
-
-To assess the sensor assembly’s durability and performance across expected thermal extremes in space.
-
-## Test Setup
-
-- Place sensor assembly inside thermal chamber.
-- Attach temperature sensors to critical points.
-- Power and monitor sensor output continuously.
-
-## Temperature Cycle
-
-| Step      | Temperature (°C) | Duration         | Ramp Rate (°C/min) | Notes                   |
-|-----------|------------------|------------------|--------------------|-------------------------|
-| 1         | -40              | 1 hour           | 5                  | Simulate cold space temp|
-| 2         | +85              | 1 hour           | 5                  | Simulate hot sun exposure|
-| 3         | Repeat steps 1-2 | 10 cycles total  |                    |                         |
-
-## Acceptance Criteria
-
-- No mechanical damage or seal degradation.
-- Sensor readings remain stable within calibration range.
-- No condensation inside enclosure.
-
-## Reporting
-
-- Visual inspection pre- and post-test.
-- Continuous logging of sensor data.
-- Summary report with pass/fail results.
+**Document Version:** 1.0  
+**Date:** 2025-05-17  
+**Author:** B. W. Design  
+**Target Audience:** QA Engineers, Mission Assurance Teams, Aerospace Test Facilities  
 
 ---
 
-Reference: NASA-STD-7001 for space hardware thermal cycling.
+## Objective
 
+To assess the PressureX sensor’s performance and structural stability when subjected to repeated temperature extremes simulating Low Earth Orbit (LEO) and deep space environments.
+
+---
+
+## Test Equipment Required
+
+- Thermal chamber (range: -60°C to +120°C)
+- Digital temperature logger
+- DAQ system with serial/USB input
+- Insulated test fixture with thermal break
+- Reference pressure source (optional for calibration drift check)
+
+---
+
+## Sensor Test Configuration
+
+- **Mounting:** Sensor secured to aluminum plate with thermal pads
+- **Power:** 3.3V from external lab PSU
+- **Interface:** USB or UART connection to host DAQ
+- **Data Logging:** Live sensor data captured at 1Hz throughout cycling
+
+---
+
+## Procedure
+
+### 1. Pre-Test Baseline
+
+- Functional test at room temperature (20°C)
+- Record pressure reading output baseline
+- Document firmware version and serial number
+
+### 2. Thermal Cycling Parameters
+
+| Phase | Temperature | Soak Time | Transition Time |
+|-------|-------------|-----------|-----------------|
+| 1     | +85°C       | 30 min    | ≤10 min         |
+| 2     | -40°C       | 30 min    | ≤10 min         |
+
+- **Cycle Count:** Minimum 10 full thermal cycles
+- Total test time: ~12 hours including transitions
+- Data recorded throughout entire cycle
+
+---
+
+## Pass/Fail Criteria
+
+- No deviation > ±3% in pressure readings from baseline
+- No physical warping or housing fractures
+- No communication interruptions or resets
+- No solder joint failure (verified by post-test continuity check)
+- Sensor reboots and functions within 5s post-cycle
+
+---
+
+## Post-Test Actions
+
+- Visual inspection and high-resolution photography
+- Data file archive (CSV or JSON)
+- Functional re-validation under nominal conditions
+- File results under `tests/results/thermal/` directory
+
+---
+
+## Notes
+
+- Optional: Extend test to 100 cycles for deep space mission profiles
+- Document any condensation-related issues or material fatigue
+- Consider conformal coating revision if failure occurs
+
+---
