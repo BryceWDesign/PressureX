@@ -1,0 +1,29 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('PressureX sensor housing model'),'1');
+FILE_NAME('pressurex_housing.step','2025-05-17T12:00:00',('BryceWDesign'),('PressureX Team'), '','', 'PressureX Sensor Housing');
+FILE_SCHEMA(('CONFIG_CONTROL_DESIGN'));
+ENDSEC;
+DATA;
+#1 = CARTESIAN_POINT('',(0.0,0.0,0.0));
+#2 = DIRECTION('',(0.0,0.0,1.0));
+#3 = VECTOR('',#2,10.0);
+#4 = AXIS2_PLACEMENT_3D('',#1,#2,#3);
+
+#5 = CYLINDRICAL_SURFACE('',#4,15.0);
+
+#10 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#20),#100);
+
+#20 = FACE_OUTER_BOUND('',#30,.T.);
+#30 = ADVANCED_FACE('',(#40),#50,.T.);
+#40 = FACE_BOUND('',#50,.T.);
+
+#50 = EDGE_LOOP('',(#60));
+#60 = ORIENTED_EDGE('',#70,.T.);
+#70 = EDGE_CURVE('',#80,#90,#100,.T.);
+#80 = VERTEX_POINT('',#1);
+#90 = VERTEX_POINT('',#1);
+#100 = CYCLIC_CURVE('',#4,30.0,.T.);
+
+ENDSEC;
+END-ISO-10303-21;
