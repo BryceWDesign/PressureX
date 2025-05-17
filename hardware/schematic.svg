@@ -1,0 +1,24 @@
+<!--
+Simple wiring schematic for PressureX hardware integration.
+Replace with an actual SVG exported from your schematic editor.
+-->
+
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="150" height="100" fill="#ddd" stroke="#000" stroke-width="2"/>
+  <text x="125" y="100" font-family="Arial" font-size="14" text-anchor="middle">Pressure Sensor</text>
+
+  <rect x="300" y="50" width="200" height="150" fill="#eee" stroke="#000" stroke-width="2"/>
+  <text x="400" y="100" font-family="Arial" font-size="14" text-anchor="middle">Microcontroller (ESP32)</text>
+
+  <!-- VCC line -->
+  <line x1="200" y1="75" x2="300" y2="75" stroke="red" stroke-width="3" />
+  <text x="250" y="65" font-family="Arial" font-size="12" fill="red" text-anchor="middle">VCC 3.3V</text>
+
+  <!-- GND line -->
+  <line x1="200" y1="125" x2="300" y2="125" stroke="black" stroke-width="3" />
+  <text x="250" y="115" font-family="Arial" font-size="12" fill="black" text-anchor="middle">GND</text>
+
+  <!-- Signal line -->
+  <line x1="200" y1="100" x2="300" y2="150" stroke="blue" stroke-width="3" />
+  <text x="250" y="135" font-family="Arial" font-size="12" fill="blue" text-anchor="middle">Signal (ADC Pin)</text>
+</svg>
