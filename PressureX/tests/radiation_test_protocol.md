@@ -1,47 +1,35 @@
-# PressureX Radiation Test Protocol
+# Radiation Test Protocol for PressureX Sensor Assembly
 
 ## Objective
 
-To evaluate the sensor assembly’s ability to withstand radiation exposure levels typical in low Earth orbit and deep space missions.
+To evaluate the sensor assembly’s tolerance to ionizing radiation typical of low Earth orbit or beyond.
 
 ## Test Setup
 
-- Radiation source: Gamma-ray and proton irradiation facilities  
-- Sensor mounted in test fixture with shielding representative of spacecraft conditions  
-- Instrumentation: Real-time sensor data logging and monitoring
+- Expose sensor assembly to gamma and proton radiation sources.
+- Power on device and monitor sensor output during exposure.
+- Use dosimeters to measure total radiation dose received.
 
-## Radiation Exposure Levels
+## Radiation Levels
 
-| Radiation Type | Total Dose (krad) | Dose Rate (krad/hr) | Duration (hours) |
-|----------------|-------------------|---------------------|------------------|
-| Gamma Rays     | 10                | 2                   | 5                |
-| Proton Beams   | 5                 | 1                   | 5                |
+| Radiation Type | Dose (krad) | Exposure Duration | Notes                           |
+|----------------|-------------|-------------------|--------------------------------|
+| Gamma          | 30          | 24 hours          | Simulate accumulated space dose|
+| Proton         | 10          | 12 hours          | Simulate solar particle events |
 
-## Pass/Fail Criteria
+## Acceptance Criteria
 
-- No significant degradation in sensor output signals during or after exposure  
-- No permanent damage to PCB or housing components  
-- Electrical continuity maintained throughout test
+- No permanent degradation of sensor performance.
+- No data corruption or functional failure.
+- Device passes post-exposure functional tests.
 
-## Procedure
+## Reporting
 
-1. Secure sensor assembly in radiation test fixture.  
-2. Calibrate instrumentation and start data acquisition.  
-3. Expose sensor to gamma rays per dose and duration specified.  
-4. Monitor and record sensor response continuously.  
-5. Repeat exposure for proton beams.  
-6. Post-test inspection for physical and electrical integrity.  
-7. Document results comprehensively.
-
-## Safety and Precautions
-
-- Follow facility safety protocols strictly.  
-- Ensure proper shielding and monitoring for personnel.  
-- Handle radiation sources with trained personnel only.
+- Document exposure parameters.
+- Record sensor data logs.
+- Submit comprehensive test report.
 
 ---
 
-References:  
-- NASA-STD-6016 for radiation testing standards  
-- ESA ECSS-Q-ST-60-15C for electronic components
+Reference: NASA-HDBK-4001 and MIL-STD-1540 standards.
 
