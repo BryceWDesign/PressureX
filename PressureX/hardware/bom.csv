@@ -1,0 +1,6 @@
+Component,Description,Part Number,Supplier,Quantity,Notes
+Pressure Sensor,XYZ123 Pressure Sensor,XYZ123,ExampleSupplier,1,Calibrated sensor module
+Microcontroller,ESP32 Dev Kit,ESP32-DEVKIT,ESP32-Supplier,1,Includes USB programming interface
+Power Supply,5V DC regulated power supply,PS-5V,Generic,1,Stable and noise-free
+Wires,Jumper wires for connections,,Generic,Various,20 cm lengths recommended
+Breadboard,Standard solderless breadboard,BB-830,Generic,1,For prototyping
