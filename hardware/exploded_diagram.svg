@@ -1,0 +1,67 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="800"
+  height="600"
+  viewBox="0 0 800 600"
+  font-family="Arial, sans-serif"
+  font-size="14"
+  >
+
+  <!-- Title -->
+  <text x="20" y="30" font-weight="bold" font-size="18">PressureX Hardware Exploded Diagram</text>
+
+  <!-- Baseplate -->
+  <rect x="300" y="450" width="200" height="15" fill="#d3d3d3" stroke="#555" stroke-width="2" />
+  <text x="350" y="445" fill="#333" font-weight="bold">Mounting Baseplate</text>
+
+  <!-- Pressure Sensor PCB -->
+  <rect x="360" y="380" width="80" height="50" fill="#ffcc00" stroke="#b8860b" stroke-width="2" rx="6" ry="6"/>
+  <text x="365" y="375" fill="#b8860b" font-weight="bold">Pressure Sensor PCB</text>
+  <line x1="400" y1="430" x2="400" y2="465" stroke="#000" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="410" y="445" fill="#555" font-style="italic" font-size="12">Mounted on baseplate</text>
+
+  <!-- Standoffs -->
+  <circle cx="365" cy="430" r="5" fill="#888" />
+  <circle cx="435" cy="430" r="5" fill="#888" />
+  <text x="440" y="430" fill="#555" font-size="12" font-style="italic">Mounting Standoffs</text>
+
+  <!-- Ribbon Cable -->
+  <rect x="365" y="320" width="70" height="25" fill="#888" stroke="#555" stroke-width="1" rx="3" ry="3"/>
+  <text x="350" y="345" fill="#eee" font-weight="bold" font-size="12">Shielded Ribbon Cable</text>
+  <line x1="400" y1="380" x2="400" y2="345" stroke="#444" stroke-width="3" />
+  
+  <!-- Microcontroller Board -->
+  <rect x="350" y="230" width="100" height="60" fill="#6495ed" stroke="#1e90ff" stroke-width="2" rx="8" ry="8" />
+  <text x="365" y="225" fill="#1e90ff" font-weight="bold">ESP32 Microcontroller</text>
+  <line x1="400" y1="290" x2="400" y2="315" stroke="#000" stroke-width="2" stroke-dasharray="4,4" />
+  <text x="455" y="260" fill="#555" font-size="12" font-style="italic">Shielded enclosure</text>
+
+  <!-- Power Supply -->
+  <rect x="500" y="350" width="140" height="80" fill="#228b22" stroke="#006400" stroke-width="2" rx="10" ry="10"/>
+  <text x="520" y="345" fill="#006400" font-weight="bold">Space-Grade Li-Ion Battery</text>
+  <line x1="500" y1="390" x2="450" y2="260" stroke="#006400" stroke-width="3" stroke-dasharray="6,6" />
+  <text x="520" y="440" fill="#004400" font-style="italic" font-size="12">MIL-STD-1275 compliant</text>
+
+  <!-- Wiring connectors -->
+  <circle cx="400" cy="295" r="6" fill="#222" />
+  <circle cx="400" cy="355" r="6" fill="#222" />
+  <text x="410" y="350" fill="#333" font-size="12" font-style="italic">Locking Connectors</text>
+
+  <!-- Assembly direction arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444" />
+    </marker>
+  </defs>
+
+  <line x1="400" y1="470" x2="400" y2="435" stroke="#444" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="380" x2="400" y2="295" stroke="#444" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="450" y1="390" x2="400" y2="310" stroke="#444" stroke-width="3" marker-end="url(#arrowhead)" />
+
+  <!-- Legend box -->
+  <rect x="20" y="520" width="760" height="60" fill="#f8f8f8" stroke="#bbb" stroke-width="1" rx="5" ry="5"/>
+  <text x="40" y="540" fill="#333" font-weight="bold" font-size="14">Legend:</text>
+  <text x="40" y="560" fill="#555" font-size="13">Yellow: Pressure Sensor PCB | Blue: Microcontroller | Green: Battery Pack | Gray: Ribbon Cable & Mounts</text>
+
+</svg>
