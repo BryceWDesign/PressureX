@@ -1,0 +1,73 @@
+PressureX Sensor Mechanical Drawing  
+-----------------------------------
+
+Date: 2025-05-17  
+Revision: A  
+Prepared by: BryceWDesign  
+
+---
+
+1. Overview:
+
+This mechanical drawing defines the dimensions, tolerances, and mounting features for the PressureX sensor housing and PCB assembly.
+
+---
+
+2. Sensor Housing Dimensions (all in mm):
+
+- Overall length: 80.0 ± 0.2  
+- Overall width: 40.0 ± 0.2  
+- Overall height: 25.0 ± 0.2  
+
+---
+
+3. Mounting Holes:
+
+- Four mounting holes, diameter 3.2 ± 0.05 mm  
+- Hole positions (center to center):  
+  - Longitudinal spacing: 70.0 ± 0.1 mm  
+  - Lateral spacing: 30.0 ± 0.1 mm  
+- Countersink depth: 1.5 mm for flat-head screws
+
+---
+
+4. PCB Dimensions:
+
+- Length: 75.0 ± 0.1 mm  
+- Width: 35.0 ± 0.1 mm  
+- Thickness: 1.6 ± 0.1 mm  
+
+---
+
+5. Connectors:
+
+- Connector cutout dimensions: 12.0 x 8.0 ± 0.05 mm  
+- Location: 5.0 mm from rear edge centered laterally  
+
+---
+
+6. Material Specifications:
+
+- Housing Material: Aluminum 6061-T6  
+- Surface Finish: Anodized, matte black  
+- PCB Material: Standard FR4  
+
+---
+
+7. Tolerances:
+
+- Linear dimensions unless otherwise specified: ± 0.1 mm  
+- Angular tolerances: ± 0.5°  
+
+---
+
+8. Notes:
+
+- All dimensions are in millimeters.  
+- Edges to be deburred and smooth to avoid sharp edges.  
+- Housing to be sealed with O-ring gasket to ensure environmental protection.  
+- Assembly to allow easy access to connectors for astronaut use.
+
+---
+
+*End of Mechanical Drawing Document*
