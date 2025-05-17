@@ -1,0 +1,16 @@
+[Binary IGES file content placeholder]
+
+Note: IGES files are typically binary or ASCII with complex structure and cannot be fully represented here.  
+Please use CAD software (SolidWorks, Fusion 360, FreeCAD) to create the model per design specs and export as IGES.
+
+Model specs mirror STEP file:
+
+- Dimensions: 50mm x 40mm x 20mm
+- Material: Space-rated aluminum alloy
+- Wall thickness: 3mm
+- Mounting: Four M3 threaded holes, 35mm spacing
+- Sensor cavity and cable gland per design
+
+---
+
+Upload actual IGES file here to complete.
