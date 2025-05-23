@@ -1,30 +1,23 @@
-* Pressure Sensor Circuit SPICE Netlist
-* Simulates signal conditioning for sensor output
+* Pressure Sensor Signal Conditioning Circuit Simulation
+* Transient analysis to verify amplification and filtering
 
-* Voltage supply
-VCC VCC 0 DC 5V
+* Sensor modeled as a voltage source with noise
+Vsensor IN 0 PULSE(0 0.01 0 1u 1u 5m 10m)
 
-* Sensor modeled as voltage source with series resistor
-VSENSOR IN 0 DC 2.5V
-RSENSOR IN OUT 1k
-
-* Amplifier stage - simple NPN transistor switch model
-Q1 OUT 0 VCC QX
-
-* Transistor model
-.model QX NPN(IS=1E-15 BF=100)
-
-* Load resistor
-RL OUT 0 10k
-
-* Capacitor for noise filtering
+* Simple RC low-pass filter to remove high-frequency noise
+R1 IN OUT 10k
 C1 OUT 0 0.1uF
 
-* Ground
-.model load res
-.tran 0.1ms 10ms
+* Operational amplifier modeled as ideal voltage follower (buffer)
+E1 BUF 0 OUT 0 1
+
+* Output load resistor
+Rload BUF 0 10k
+
+.tran 0 10m 0 1u
 .control
 run
-plot V(IN) V(OUT)
+plot V(IN) V(BUF)
 .endc
+
 .end
