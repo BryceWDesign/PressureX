@@ -1,77 +1,77 @@
 # Radiation Test Protocol for PressureX Sensor Module
 
-## Document Version  
-**Rev:** 1.0  
+## Document Version
+**Rev:** 1.1  
 **Date:** 2025-05-17  
-**Author:** BryceWDesign
+**Author:** Bryce Lovell
 
 ---
 
-## Purpose  
-Define procedures for assessing the PressureX sensor module’s resistance to ionizing radiation typically encountered in Low Earth Orbit (LEO) and beyond.
+## Purpose
+Define a **prototype-level** procedure for assessing the PressureX sensor module’s response to ionizing radiation (if radiation is in scope for a target environment).
+
+This document is a planning template and does **not** imply qualification or compliance.
 
 ---
 
-## Scope  
+## Scope
 Covers Total Ionizing Dose (TID) and Single Event Effects (SEE) testing for the PressureX sensor PCB and components.
 
 ---
 
-## References  
-- NASA-STD-5001: Radiation Design Guidelines for Space Systems  
-- MIL-STD-883H Method 1019.9: Total Ionizing Dose Testing  
-- ESA ECSS-E-ST-10-11C: Space Environment Testing  
-- JEDEC JESD89A: Single Event Effects Test Methodology  
+## References
+The following are **example** references often used in radiation test planning. Listing here does **not** imply compliance.
+
+- MIL-STD-883 (Method 1019) (as applicable)
+- JEDEC JESD89 (SEE methodology) (as applicable)
+- ECSS radiation/environment standards (as applicable)
 
 ---
 
-## Test Setup  
+## Test Setup
 
-### Equipment Required  
-- Gamma radiation source (e.g., Cobalt-60)  
-- Heavy ion accelerator or proton beam facility for SEE testing  
-- Dosimeters and radiation sensors for dose measurement  
-- Test fixture for PressureX module with power and data interfaces  
+### Equipment Required
+- Gamma radiation source (e.g., Co-60)
+- Heavy ion accelerator or proton beam facility for SEE testing
+- Dosimeters for dose measurement
+- Test fixture with power and data interfaces
 
-### Test Environment  
-- Room temperature (23°C ± 5°C)  
-- Controlled humidity (<50%)  
-
----
-
-## Test Procedures  
-
-### Total Ionizing Dose (TID) Testing  
-1. Expose the fully assembled PressureX module to incremental gamma radiation doses up to 30 krad(Si).  
-2. Power the device during exposure; operate sensor to collect baseline and during-radiation data.  
-3. After each dose increment, verify sensor accuracy and device functionality.  
-4. Continue until maximum dose or failure threshold is reached.  
-
-### Single Event Effects (SEE) Testing  
-1. Irradiate device using heavy ions or proton beams at specified Linear Energy Transfer (LET) levels.  
-2. Monitor device for single event upsets (SEU), latch-ups (SEL), or functional interrupts.  
-3. Record any errors and device recovery behavior.  
+### Test Environment
+- Room temperature (23°C ± 5°C)
+- Controlled humidity (<50%)
 
 ---
 
-## Acceptance Criteria  
-- Device must operate within ±1% sensor accuracy post-TID exposure.  
-- No permanent latch-ups or destructive failures during SEE testing.  
-- Device recovery or reset must be successful after transient events.  
+## Test Procedures
+
+### Total Ionizing Dose (TID)
+1. Expose assembled module to incremental gamma doses up to a program-defined limit (example: 30 krad(Si)).
+2. Power the device during exposure and collect baseline + during-exposure data.
+3. After each increment, verify sensor functionality and drift relative to baseline.
+4. Continue until max dose or failure threshold is reached.
+
+### Single Event Effects (SEE)
+1. Irradiate using heavy ions or protons at defined LET/energy levels.
+2. Monitor for upsets (SEU), latch-ups (SEL), and functional interrupts.
+3. Record errors and recovery behavior.
 
 ---
 
-## Reporting  
-Include:  
-- Radiation source and parameters used  
-- Dose rates and cumulative doses  
-- Detailed device response logs and error counts  
-- Pass/fail determinations  
+## Proposed Acceptance Criteria (Prototype)
+Define per mission/use-case. Common prototype criteria include:
+- No destructive failure or persistent latch-up during exposure.
+- Operation remains within a defined tolerance band relative to baseline.
+- Recovery behavior is deterministic and logged (reset/watchdog as designed).
 
 ---
 
-## Remarks  
-Coordinate with radiation test facilities and radiation hardening experts to validate protocols and results.
+## Reporting
+Include:
+- Source parameters, dose rate, and cumulative dose
+- Device response logs and error counts
+- Pass/fail determinations based on defined criteria
 
 ---
 
+## Remarks
+Coordinate with qualified radiation test facilities and radiation effects specialists to validate protocols and interpret results.
