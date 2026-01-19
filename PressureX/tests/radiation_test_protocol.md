@@ -1,35 +1,33 @@
 # Radiation Test Protocol for PressureX Sensor Assembly
 
 ## Objective
+Prototype-level radiation test planning notes to evaluate sensor assembly response to ionizing environments (if in scope).
 
-To evaluate the sensor assembly’s tolerance to ionizing radiation typical of low Earth orbit or beyond.
+This document is a **template** and does not claim compliance with any particular standard.
 
-## Test Setup
+## Test Setup (generic)
+- Expose sensor assembly to a defined radiation source (gamma/proton/etc as appropriate).
+- Define powered vs unpowered conditions.
+- Monitor sensor output and system health during exposure.
+- Use dosimetry appropriate to the facility and program.
 
-- Expose sensor assembly to gamma and proton radiation sources.
-- Power on device and monitor sensor output during exposure.
-- Use dosimeters to measure total radiation dose received.
+## Example Planning Table
+| Radiation Type | Dose Target | Exposure Duration | Notes |
+|----------------|------------|-------------------|------|
+| Gamma          | Define      | Derived           | TID planning |
+| Proton         | Define      | Derived           | SEE/TID depending on regime |
 
-## Radiation Levels
-
-| Radiation Type | Dose (krad) | Exposure Duration | Notes                           |
-|----------------|-------------|-------------------|--------------------------------|
-| Gamma          | 30          | 24 hours          | Simulate accumulated space dose|
-| Proton         | 10          | 12 hours          | Simulate solar particle events |
-
-## Acceptance Criteria
-
-- No permanent degradation of sensor performance.
-- No data corruption or functional failure.
-- Device passes post-exposure functional tests.
+## Proposed Acceptance Criteria (Prototype)
+- No permanent functional failure during exposure.
+- Drift remains within defined tolerance relative to baseline.
+- Device passes post-exposure functional checks.
 
 ## Reporting
+- Document exposure parameters and dosimetry.
+- Record raw sensor logs and health telemetry.
+- Preserve setup details sufficient for repeatability.
 
-- Document exposure parameters.
-- Record sensor data logs.
-- Submit comprehensive test report.
-
----
-
-Reference: NASA-HDBK-4001 and MIL-STD-1540 standards.
-
+## References (examples only)
+Listing here does **not** imply compliance:
+- MIL-STD-883 (as applicable)
+- JEDEC JESD89 (as applicable)
