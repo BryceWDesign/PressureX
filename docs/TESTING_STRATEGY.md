@@ -1,59 +1,45 @@
-# Testing Strategy for PressureX Sensor System
+# Testing Strategy for PressureX
 
 ## Purpose
-Establish a robust testing framework to validate functionality, reliability, and environmental resilience of the PressureX sensor system.
+Establish a testing framework to evaluate functionality, reliability, and environmental resilience relevant to the intended use-case.
 
 ---
 
 ## Test Types
 
 ### 1. Functional Testing
-- Verify sensor outputs across expected pressure ranges.
+- Verify outputs across expected ranges.
 - Confirm signal integrity and data accuracy.
-- Test interface and communication protocols.
+- Validate interfaces and logging.
 
-### 2. Environmental Testing
-
+### 2. Environmental Testing (as applicable)
 #### Thermal Cycling
-- Subject prototypes to temperature extremes simulating space environment.
-- Verify sensor operation before, during, and after cycles.
+- Subject prototypes to temperature extremes relevant to the intended environment.
+- Verify operation before/during/after cycles.
 
-#### Vibration Testing
-- Simulate launch and operational vibrations per aerospace standards.
-- Check for mechanical integrity and electrical continuity.
+#### Vibration / Shock
+- Simulate vibration/shock environments relevant to the target application.
+- Check mechanical integrity and electrical continuity.
 
-#### Radiation Testing
-- Assess sensor resilience to ionizing radiation.
-- Use available data or partner with radiation testing facilities.
+#### Radiation (optional)
+- If radiation is in-scope, evaluate drift and failure modes via qualified facilities.
 
-### 3. Durability and Lifetime Testing
+### 3. Durability / Lifetime Testing
 - Continuous operation under nominal conditions.
-- Accelerated aging tests if possible.
+- Accelerated aging where meaningful.
 
 ### 4. Integration Testing
-- Validate system compatibility with data acquisition hardware.
-- Ensure proper communication and data logging.
+- Validate compatibility with DAQ/logging systems.
+- Confirm telemetry and fault handling.
 
 ---
 
 ## Test Protocols
-
-- Follow applicable aerospace testing standards (e.g., NASA-STD-7001 for vibration).
-- Document all test setups, conditions, and results.
-- Maintain traceability between test results and design iterations.
-
----
-
-## Recommended Facilities and Resources
-
-- Collaborate with university labs or commercial test facilities for environmental testing.
-- Leverage simulation tools to supplement physical tests.
+- Use applicable environmental test standards as *references* where relevant (program-specific).
+- Document setups, conditions, and raw data.
+- Maintain traceability between results and design changes.
 
 ---
 
 ## Conclusion
-
-A disciplined testing strategy maximizes confidence in sensor reliability and suitability for aerospace applications.
-
----
-
+A disciplined test strategy is required before any performance claims can be made. This repo provides planning templates and a validation path; results require traceable execution.
