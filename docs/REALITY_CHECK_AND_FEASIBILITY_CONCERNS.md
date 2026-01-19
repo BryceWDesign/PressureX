@@ -1,59 +1,36 @@
 # PressureX: Reality Check and Feasibility Considerations
 
 ## Introduction
+This document is an honest assessment of what PressureX **is today** (an evaluation package + early conceptual work) and what it is **not yet** (validated hardware).
 
-This document is meant to present an honest and transparent assessment of the PressureX concept's development limitations and the reality of taking it beyond the theoretical design stage without access to space-based testing infrastructure or significant capital.
-
----
-
-## 1. Developer Background
-
-- **Developer Name:** Bryce (not an aerospace engineer)
-- **Primary Skillset:** UX/UI Design, reverse engineering, and systems-level conceptual thinking
-- **Approach:** Design methodology driven by critical analysis, logical deduction, and emulation of existing aerospace-grade problem-solving processes.
-
----
+## 1. Background (scope, not credentials)
+PressureX is organized as a structured engineering review package:
+- Explicit system boundaries and non-capabilities
+- Design-intent targets (not results)
+- Failure modes and limits
+- A staged validation path with kill criteria
 
 ## 2. Current Development Status
+- Documentation and system framing are published in this repository.
+- Conceptual modeling exists to support parameter intuition (illustrative only).
+- Physical prototyping and lab validation are not complete in this repository.
 
-- All documentation, system architecture, and engineering design artifacts are available in this GitHub repository.
-- Simulations are proposed but untested due to lack of hardware and tools.
-- Physical prototyping, vacuum testing, and launch-grade qualification are not currently feasible for me at this time due to personal cost limitations.
+## 3. Known Limitations (current reality)
+| Limitation | Current Mitigation |
+|-----------|---------------------|
+| No completed lab validation results in-repo | Provide a clear validation plan with falsification tests |
+| No external qualification claim | All protocols are marked as templates and require program tailoring |
+| Material behavior depends on containment + interface design | Capture failure modes and limits up front |
 
----
+## 4. What Makes PressureX Worth Reviewing?
+- It is framed to be **disprovable** quickly (kill tests are explicit).
+- The “what it is / what it is not” boundaries are written first.
+- The repo is structured for a fast technical triage by structures/dynamics/test engineers.
 
-## 3. Known Limitations
+## 5. Invitation to Technical Review
+If you have facilities and expertise to evaluate structural mitigation layers, the highest-value input is:
+- Which single test would you run first to falsify the concept?
+- What pass/fail metric would you use?
 
-| Limitation                                | Current Mitigation Plan                  |
-|-------------------------------------------|------------------------------------------|
-| No funding for material procurement        | Open-source transparency to attract backers |
-| No access to space testing                 | Leverage simulation, seek academic collaboration |
-| No direct aerospace affiliation            | Appeal to merit of the concept and originality |
-| No custom sensor inventory                 | Use existing sensor emulation models     |
-
----
-
-## 4. What Makes PressureX Worth Watching?
-
-- Offers a non-invasive, low-cost solution to a known high-cost problem.
-- Entirely based on modular, swappable components.
-- Designed to scale with launch vehicle evolution (Starship, Falcon 9, etc.)
-- Could integrate into existing sensor arrays without mission-critical interference.
-
----
-
-## 5. Invitation to Stakeholders
-
-To any organization capable of furthering this design with facilities, funding, or aerospace-grade testing environments:
-> Your involvement could turn this concept into a launch-ready technology.
-
-All blueprints, logic, rationale, and documentation have been provided. Serious inquiries and technical collaboration are welcome.
-
----
-
-## 6. Closing Thoughts
-
-This is not a blueprint from a NASA lab. It's an effort from a non-traditional mind applying engineering logic to a known problem—without the privilege of an aerospace budget or title.
-
-What it lacks in certification, it makes up for in raw innovation, modularity, and simplicity.
-
+## Closing
+PressureX is presented as an engineering artifact intended for review and iteration. It does not claim validated performance until traceable test data is produced.
