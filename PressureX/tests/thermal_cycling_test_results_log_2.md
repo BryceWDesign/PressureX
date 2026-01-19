@@ -1,36 +1,20 @@
-# PressureX Thermal Cycling Test Results Log #2
+# Thermal Cycling Test Results Log (TEMPLATE — Duplicate Copy)
 
-## Test Summary
+> **TEMPLATE ONLY — NO TESTING IMPLIED**
+>
+> This repository previously contained multiple “results log” drafts. This file is retained as a duplicate template for convenience.
+> For consistency, prefer using: `thermal_cycling_test_results_log.md`
 
-- Date: 2025-05-17  
-- Test Lab: AeroSpace Testing Inc.  
-- Test Engineer: John Smith  
+## Document Control
+- Document: Thermal Cycling Test Results Log (Template)
+- Revision: 1.0
+- Date created: YYYY-MM-DD
+- Maintainer: Bryce Lovell (BryceWDesign)
+- UUT ID / Serial: TBD
+- Build revision / BOM revision: TBD
 
-## Setup
-
-- Sensor Model: PressureX v1.0  
-- Thermal Cycle: -40°C to +85°C, 10 cycles  
-- Instrumentation: Temperature sensors and data acquisition system  
-
-## Observations
-
-| Cycle Number | Sensor Output Stability | Mechanical Integrity | Notes                |
-|--------------|-------------------------|---------------------|----------------------|
-| 1            | Stable                  | No damage           | Initial baseline     |
-| 5            | Stable                  | No damage           | Mid-test inspection  |
-| 10           | Stable                  | No damage           | Test completion      |
-
-## Post-Test Inspection
-
-- No cracks or warping observed on housing or PCB  
-- Sensor signals remained within specifications throughout the test  
-- No electrical continuity issues detected
-
-## Conclusion
-
-PressureX sensor maintained full functionality and structural integrity throughout thermal cycling test.
-
----
-
-End of report.
-
+## Raw Data Requirement
+No claim of performance, robustness, or pass/fail is valid without:
+- Defined criteria
+- Chamber profile details
+- Linked raw logs + metadata
