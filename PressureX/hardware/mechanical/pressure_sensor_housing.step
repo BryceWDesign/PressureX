@@ -1,12 +1,11 @@
-PressureX Sensor Housing (pressure_sensor_housing.step)
+PressureX Sensor Housing (placeholder notes)
 
-File Format: ISO 10303-21 (STEP)
+File Format: STEP (intended) — NOTE: this file is currently a text placeholder, not an exported CAD model.
 
 Description:
-- Compact shell enclosure for sensor + PCB
-- Material: PEEK (Polyetheretherketone), space-grade, high-temp rated
-- Pressure vent hole allows for external pressure communication
-- Designed for vacuum compatibility, low outgassing
+- Compact shell enclosure concept for sensor + PCB
+- Suggested material: high-temperature engineering plastic (select per environment and requirements)
+- Pressure vent hole allows for external pressure communication (if required by use-case)
 
 Dimensions:
 - External: 35mm (L) x 25mm (W) x 15mm (H)
@@ -16,20 +15,17 @@ Dimensions:
 
 Features:
 - 1 pressure port (Ø2.5mm, center-top)
-- Snap-fit lid with screw holes for redundancy
+- Lid concept with screw holes for retention
 - Cable exit cutout: 5mm x 3mm
-- Ventilation filter seat (for Gore-Tex membrane)
 
 Usage Notes:
-- Print or machine housing in PEEK or Ultem
-- Ensure tight tolerances for sensor alignment
-- Seal sensor window with optical epoxy or O-ring groove (optional)
+- Select materials and sealing approach based on the intended environment (temperature, contamination, outgassing, serviceability).
+- Verify tolerances and connector clearances in CAD prior to fabrication.
 
-To Rebuild:
+To Rebuild (in CAD):
 1. Create box: 35mm x 25mm x 15mm
 2. Shell: leave 2mm wall thickness
 3. Add top pressure port (Ø2.5mm)
 4. Add mounting tabs on bottom face
 5. Cut internal pocket: 30mm x 20mm x 10mm
 6. Export as `.step`
-
