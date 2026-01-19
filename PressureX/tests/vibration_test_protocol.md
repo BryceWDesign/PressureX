@@ -1,81 +1,84 @@
 # PressureX Sensor – Vibration Test Protocol
 
-**Document Version:** 1.0  
+**Document Version:** 1.1  
 **Date:** 2025-05-17  
-**Author:** B. W. Design  
-**Target Audience:** QA Engineers, Aerospace Contractors, Compliance Teams  
+**Author:** Bryce Lovell  
+**Target Audience:** Structures / Dynamics / Test Engineers  
 
 ---
 
 ## Objective
+Prototype-level vibration test procedure for the PressureX sensor assembly to evaluate:
+- Mechanical integrity (fasteners, housing, cable strain relief)
+- Electrical continuity and functional data output pre/during/post test
 
-To validate the structural integrity and electrical continuity of the PressureX sensor under simulated launch vibration profiles per NASA GEVS (GSFC-STD-7000A) and SpaceX payload qualification guidelines.
+This protocol is a **template**. It does **not** claim compliance with any specific customer/program standard.
+
+---
+
+## References (examples only)
+Example documents commonly used to derive vibration environments. Listing here does **not** imply compliance:
+- General Environmental Verification Standard (GEVS) style random vibration profiles (as applicable)
+- MIL-STD environmental test methods (as applicable)
 
 ---
 
 ## Equipment Required
-
-- Vibration Table (3-axis servo-hydraulic or electromagnetic shaker)
-- Data Acquisition System (minimum 2kHz sampling)
-- Accelerometers (±100g range)
-- Test Fixture (aluminum mounting plate, M2 screws)
-- Thermal Dummy Load (if heat dissipation is a factor)
+- Vibration table (3-axis shaker or equivalent)
+- Data acquisition system (sample rate per sensor bandwidth; document actual)
+- Accelerometers (range appropriate to expected levels)
+- Test fixture (rigid mounting plate and hardware)
+- Power supply (isolated, regulated)
 
 ---
 
-## Sensor Test Configuration
-
-- **Unit Under Test (UUT):** Fully assembled PressureX unit
-- **Mounting Method:** 4x M2 bolts to aluminum fixture simulating onboard housing
-- **Cable Management:** Sensor fully wired with ribbon cables; strain relief applied
-- **Power:** Supplied via isolated 3.3V lab-grade source
+## Test Configuration
+- **Unit Under Test (UUT):** PressureX sensor assembly (as-built prototype)
+- **Mounting:** Document bolt pattern, torque, and interface stack-up
+- **Cabling:** Document routing and strain relief; avoid cable whip
+- **Power/Data:** Document voltage, interfaces, and logging method
 
 ---
 
 ## Procedure
 
-### 1. Pre-Test Inspection
+### 1) Pre-test checks
+- Visual inspection (fasteners, solder joints, connectors)
+- Continuity check
+- Functional baseline capture (record baseline noise and nominal output)
 
-- Visual check for loose parts
-- Electrical continuity check
-- Functional boot-up via USB/serial output
+### 2) Vibration sequence (define per environment)
+Define axis-by-axis profiles per your target environment. Example framework:
 
-### 2. Vibration Testing Sequence
+| Axis | Profile Type | Frequency Range | Duration |
+|------|--------------|-----------------|----------|
+| X    | Sine sweep + random | Define | Define |
+| Y    | Sine sweep + random | Define | Define |
+| Z    | Sine sweep + random | Define | Define |
 
-| Axis        | Frequency Range | Sweep Rate | Duration per Axis |
-|-------------|-----------------|------------|--------------------|
-| X           | 20 Hz – 2 kHz   | 2 oct/min  | 10 min             |
-| Y           | 20 Hz – 2 kHz   | 2 oct/min  | 10 min             |
-| Z           | 20 Hz – 2 kHz   | 2 oct/min  | 10 min             |
+During each run:
+- Log sensor output continuously
+- Log accelerometer data at mounting interface
+- Note any resets, dropouts, or connector intermittence
 
-- Test profile: Sine sweep and random vibration
-- Random Profile Target: 14.1 Grms (NASA GEVS Class II payload)
-- Peak Acceleration: 15g
-
----
-
-## Pass/Fail Criteria
-
-- No visual or structural damage
-- Sensor output remains functional and within ±5% margin of baseline
-- No mechanical detachment of internal components
-- No connector decoupling or shorting
-- Post-test full functionality (calibration check)
+### 3) Post-test checks
+- Re-run functional baseline capture
+- Re-check continuity
+- Inspect for cracks, loosening, connector damage, or wire fretting
 
 ---
 
-## Post-Test Actions
-
-- Capture high-res photos for report
-- Save log files from DAQ system
-- Upload data to `tests/results/` with metadata (SN, date, operator)
-
----
-
-## Notes
-
-- Repeat test with thermal cycle preconditioning for combined stress validation
-- Consider testing with vibration-damped PCB variant
+## Proposed Pass/Fail Criteria (Prototype)
+Define per use-case; common prototype criteria include:
+- No physical damage or loose hardware
+- No unintended reset or sustained data dropout
+- Output remains within a defined tolerance band relative to pre-test baseline
+- Post-test unit remains fully functional
 
 ---
 
+## Data & Reporting
+Record:
+- Fixture drawing/photos + mounting torque
+- Profile definitions + actual measured response
+- Raw logs (sensor + accelerometers) + metadata (date, operator, SN)
