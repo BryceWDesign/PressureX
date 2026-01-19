@@ -13,8 +13,8 @@
     (component (ref U1) (value Pressure_Sensor_IC)
       (footprint Sensor_IC_Footprint)
       (fields
-        (field (name "Manufacturer") "SpaceGrade Sensors Inc.")
-        (field (name "PartNumber") "SGS-1234")
+        (field (name "Manufacturer") "TBD (placeholder)")
+        (field (name "PartNumber") "TBD")
       )
       (pins
         (pin (num 1) (name VDD) (type input) (x 0) (y 10))
