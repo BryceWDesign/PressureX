@@ -1,46 +1,45 @@
 # PressureX Risk Assessment and Mitigation Plan
 
-## Overview  
-This document identifies potential risks during the development and deployment of PressureX and outlines mitigation strategies to minimize impact.
+## Overview
+This document identifies risks during development and outlines mitigation strategies.
 
 ---
 
 ### Technical Risks
 
-| Risk                                | Likelihood | Impact | Mitigation Strategy                                      |
-|------------------------------------|------------|--------|----------------------------------------------------------|
-| PCB design errors causing failures | Medium     | High   | Conduct thorough simulation and peer reviews; iterate prototypes |
-| Mechanical housing fit issues      | Low        | Medium | Use precise 3D modeling and tolerance analysis           |
-| Sensor inaccuracies in space       | Medium     | High   | Calibrate extensively on Earth; plan for in-situ calibration if possible |
-| Communication failure              | Low        | High   | Select robust aerospace-grade connectors and shielding   |
+| Risk | Likelihood | Impact | Mitigation Strategy |
+|------|------------|--------|---------------------|
+| PCB design errors causing failures | Medium | High | Peer review; prototype iterations; post-assembly inspection and test |
+| Mechanical housing fit issues | Low | Medium | Tolerance analysis; physical fit checks with representative hardware |
+| Sensor inaccuracies under stress | Medium | High | Baseline characterization; controlled environment testing; calibration strategy |
+| Communication failure | Low | High | Use locking connectors where needed; verify strain relief; EMI considerations |
 
 ---
 
 ### Schedule Risks
 
-| Risk                                | Likelihood | Impact | Mitigation Strategy                                      |
-|------------------------------------|------------|--------|----------------------------------------------------------|
-| Delays in prototype fabrication    | Medium     | Medium | Identify multiple suppliers; maintain buffer in timeline |
-| Testing schedule overruns           | Low        | High   | Early test planning; pre-validate test setups            |
+| Risk | Likelihood | Impact | Mitigation Strategy |
+|------|------------|--------|---------------------|
+| Delays in prototype fabrication | Medium | Medium | Multiple suppliers; buffer time in plan |
+| Testing schedule overruns | Low | High | Pre-validate test setups; run small pilots first |
 
 ---
 
 ### Financial Risks
 
-| Risk                                | Likelihood | Impact | Mitigation Strategy                                      |
-|------------------------------------|------------|--------|----------------------------------------------------------|
-| Budget constraints for prototype   | High       | High   | Prioritize critical components; seek external funding or partnerships |
+| Risk | Likelihood | Impact | Mitigation Strategy |
+|------|------------|--------|---------------------|
+| Budget constraints for prototypes | High | High | Prioritize high-signal tests; reduce scope to falsification-first |
 
 ---
 
 ### Environmental Risks
 
-| Risk                                | Likelihood | Impact | Mitigation Strategy                                      |
-|------------------------------------|------------|--------|----------------------------------------------------------|
-| Exposure to unexpected space conditions | Low   | High   | Follow rigorous space qualification standards; perform extensive simulation and ground testing |
+| Risk | Likelihood | Impact | Mitigation Strategy |
+|------|------------|--------|---------------------|
+| Unexpected environmental stressors | Low | High | Define environment clearly; test to the defined environment; document margins and failure modes |
 
 ---
 
-## Conclusion  
-Continuous risk monitoring and proactive mitigation are critical to ensure PressureX success. Updates to this document will be made as the project progresses.
-
+## Conclusion
+Risk monitoring and proactive mitigation are required to prevent overstating readiness. This repo is structured for review; performance claims require traceable test data.
