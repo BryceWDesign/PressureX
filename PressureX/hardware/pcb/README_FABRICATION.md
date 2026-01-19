@@ -1,31 +1,30 @@
-# PressureX PCB Fabrication & Assembly Notes
+# PressureX PCB Fabrication & Assembly Notes (Prototype Instrumentation)
 
 ## Overview
-This document contains guidelines for fabricating and assembling the PressureX PCB, designed to support a BMP388 sensor and STM32F103C8T6 MCU for high-resolution barometric pressure measurement in aerospace environments.
+Guidelines for fabricating and assembling the PressureX sensor PCB (BMP388 + STM32F103C8T6). This is **prototype instrumentation** intended to support validation workflows; it is **not flight-qualified**.
 
 ---
 
 ## PCB Specifications
 
-| Parameter                  | Value                  |
-|---------------------------|------------------------|
-| Dimensions                | 30mm x 20mm            |
-| Layers                    | 2                      |
-| Copper Thickness          | 1 oz                   |
-| Board Thickness           | 1.6mm                  |
-| Surface Finish            | ENIG (Gold)            |
-| Soldermask Color          | Black                  |
-| Silkscreen Color          | White                  |
-| Min Trace Width/Spacing   | 6 mil                  |
-| Drill Size (Via)          | 0.4mm                  |
-| Via Type                  | Through-hole           |
-| Edge Cuts Tolerance       | ±0.1mm                 |
+| Parameter                | Value        |
+|-------------------------|--------------|
+| Dimensions              | 30mm x 20mm  |
+| Layers                  | 2            |
+| Copper Thickness        | 1 oz         |
+| Board Thickness         | 1.6mm        |
+| Surface Finish          | ENIG (Gold)  |
+| Soldermask Color        | Black        |
+| Silkscreen Color        | White        |
+| Min Trace Width/Spacing | 6 mil        |
+| Drill Size (Via)        | 0.4mm        |
+| Via Type                | Through-hole |
+| Edge Cuts Tolerance     | ±0.1mm       |
 
 ---
 
 ## Recommended Fabrication House
-
-Any IPC Class 2 certified PCB manufacturer with ENIG capability is acceptable. Recommended examples:
+Any competent PCB manufacturer with ENIG capability is acceptable. Examples:
 - JLCPCB
 - OSH Park
 - PCBWay
@@ -34,45 +33,38 @@ Any IPC Class 2 certified PCB manufacturer with ENIG capability is acceptable. R
 
 ## Assembly Notes
 
-### Components:
+### Components
 - **U1**: STM32F103C8T6 (LQFP-48)
 - **U2**: Bosch BMP388 sensor (QFN)
-- Standard 0603 or 0402 passives for pull-ups, decoupling caps
+- Standard 0603/0402 passives for pull-ups and decoupling
 
-### Assembly Process:
-1. Use reflow soldering for QFN and LQFP components. Manual soldering of passives is acceptable.
-2. Use stencil for solder paste application (recommended thickness: 0.12mm).
-3. Bake assembled boards at 120°C for 2 hours to remove moisture before use in vacuum or thermal cycling environments.
-
----
-
-## Testing & QA
-
-Post-assembly validation checklist:
-- ✔ Power continuity (3.3V and GND)
-- ✔ I²C communication test with BMP388
-- ✔ SWD interface check with STM32
-- ✔ No shorts or lifted pads under QFN sensor
+### Assembly Process
+1. Reflow recommended for QFN/LQFP components.
+2. Stencil thickness: ~0.12mm (adjust as required).
+3. If vacuum/thermal cycling is relevant, follow standard moisture handling practices for components/assemblies.
 
 ---
 
-## Notes for Space Use
+## Testing & QA (prototype)
+- Power continuity (3.3V and GND)
+- I²C communication with BMP388
+- SWD interface check with STM32
+- Visual inspection for shorts/lifted pads (especially under QFN)
 
-- Apply conformal coating if exposure to moisture or contaminants is likely.
-- Consider potting the sensor if shock/vibration exceed 50g.
-- If flying to orbit: all components must be space-grade or radiation-tolerant.
+---
+
+## Environment Notes (select per use-case)
+- Conformal coating can help with contamination/moisture exposure if relevant.
+- Potting/encapsulation is optional and should be chosen based on the mechanical environment and serviceability needs.
+- If radiation/vacuum/outgassing are in scope, select materials/components based on program requirements and verify via appropriate testing.
 
 ---
 
 ## Gerber & Assembly Files
-
-> [COMING SOON: Will be added in `/hardware/pcb/fab_files/` folder]
+If/when released, they should live alongside this README under a clearly versioned folder.
 
 ---
 
 ## Maintainer
-
-Bryce W.  
-[https://github.com/BryceWDesign]
-
----
+Bryce Lovell  
+https://github.com/BryceWDesign
